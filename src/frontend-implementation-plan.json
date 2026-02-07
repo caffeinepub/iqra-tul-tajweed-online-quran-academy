@@ -1,0 +1,242 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Iqra-Tul-Tajweed Online Quran Academy — Multi-page Marketing Website (Frontend)",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Create a 5-page SPA with persistent header navigation and footer across all pages.",
+      "acceptanceCriteria": [
+        "Navigation links exist for all 5 pages and route correctly without full page reloads.",
+        "Header and footer render consistently across all pages.",
+        "All user-facing text is in English."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the app shell using React Router (prefer HashRouter for static hosting compatibility), with a shared Layout that renders a persistent header + footer and an outlet area for: Home, About Us, Course Details, Tutors Details & Experience, Contact Details. Use shadcn-ui (selected component) building blocks (e.g., navigation/menu, buttons) where available to keep styling consistent; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/main.tsx",
+          "operation": "modify",
+          "description": "Ensure the app mounts the new App.tsx routing structure cleanly (keep existing providers like QueryClientProvider/InternetIdentityProvider intact, since no authentication is required for this marketing site)."
+        },
+        {
+          "path": "frontend/src/components/layout/SiteLayout.tsx",
+          "operation": "create",
+          "description": "Create a shared layout component that composes the persistent header and footer and provides consistent page padding/width. Use shadcn-ui (selected component) layout primitives (e.g., separators) where available; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/layout/HeaderNav.tsx",
+          "operation": "create",
+          "description": "Create a responsive header with logo + navigation links to all 5 routes using client-side navigation. Use shadcn-ui (selected component) navigation/menu components if present; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/layout/SiteFooter.tsx",
+          "operation": "create",
+          "description": "Create a footer with academy name and basic contact prompt, styled consistently with the site theme. Use shadcn-ui (selected component) typography/utilities as applicable; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/public/assets/generated/academy-logo.dim_512x512.png",
+          "operation": "create",
+          "description": "Add the generated academy logo asset at this exact path so it can be referenced by the header/branding UI."
+        },
+        {
+          "path": "frontend/public/assets/generated/hero-bg.dim_1920x1080.png",
+          "operation": "create",
+          "description": "Add the generated hero background image at this exact path so it can be referenced by the Home hero section."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Populate the Home page with professional hero, course summary, and benefits sections (responsive).",
+      "acceptanceCriteria": [
+        "Home page includes course offerings that explicitly include: Qawaid Qaida + Tajweed, Quran Nazera, Quran Recitation, Islamic Knowledge.",
+        "Home page includes the 5 benefits exactly as listed in the project state summary.",
+        "Layout is responsive and looks good on mobile and desktop."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "create",
+          "description": "Implement the Home page sections: hero (academy name + concise value statement) using frontend/public/assets/generated/hero-bg.dim_1920x1080.png, a course offerings summary explicitly listing the 4 required offerings, and a benefits section listing exactly: 2 free trial classes, flexible timing, no age limit, separate male/female tutors, one-on-one classes. Use shadcn-ui (selected component) cards/buttons where available; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/content/siteContent.ts",
+          "operation": "create",
+          "description": "Create a centralized content/config module for reusable marketing copy and lists (course offerings and benefits) so Home/About/Courses can share consistent text. Keep all user-facing text in English."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the Home page into the router and ensure it is reachable via the header navigation. Use shadcn-ui (selected component) routing-linked UI elements where applicable; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Add an About Us page with mission, teaching approach, and a 'Why choose us' section without unverifiable claims.",
+      "acceptanceCriteria": [
+        "About Us page contains mission + teaching approach content and a “Why choose us” section.",
+        "No third-party certifications, statistics, or unverifiable claims are added."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/AboutPage.tsx",
+          "operation": "create",
+          "description": "Create an About Us page with professional mission + teaching approach content, and a 'Why choose us' section that reinforces the known benefits without adding unverifiable claims. Use shadcn-ui (selected component) typography/prose styling where available; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/content/siteContent.ts",
+          "operation": "modify",
+          "description": "Add About page copy (mission/approach/why-choose-us) to the centralized config so it remains easy to update in one place."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Register the About Us route and ensure it appears in the header navigation with correct client-side routing. Use shadcn-ui (selected component) navigation elements if used; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Create a Course Details page with a consistent structure per course for the required offerings.",
+      "acceptanceCriteria": [
+        "Each listed course is visible on the Course Details page and uses a consistent presentation format.",
+        "Course list includes at least the 4 explicitly named offerings."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/CourseDetailsPage.tsx",
+          "operation": "create",
+          "description": "Implement Course Details page rendering the required offerings (Qawaid Qaida + Tajweed, Quran Nazera, Quran Recitation, Islamic Knowledge) with a consistent per-course structure (e.g., overview, who it's for, what students learn). Use shadcn-ui (selected component) cards/accordions where available; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/content/siteContent.ts",
+          "operation": "modify",
+          "description": "Store the canonical course list and per-course structured fields in centralized config to keep Home summary and Course Details consistent."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Register the Course Details route and ensure navigation wiring is present. Use shadcn-ui (selected component) navigation elements if used; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Create Tutors Details & Experience page with multiple placeholder profiles sourced from a single central config.",
+      "acceptanceCriteria": [
+        "Tutors page renders at least 2 placeholder tutor cards/sections.",
+        "Tutor content is sourced from a single centralized data structure (one place to edit) rather than hardcoded throughout the UI.",
+        "Placeholders are clearly labeled as placeholders in the content."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/TutorsPage.tsx",
+          "operation": "create",
+          "description": "Create a Tutors Details & Experience page that renders a list of tutor profiles (name, short bio, experience/qualifications text, languages/teaching focus) with at least 2 clearly labeled placeholder entries. Use shadcn-ui (selected component) card components where available; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/content/siteContent.ts",
+          "operation": "modify",
+          "description": "Add a centralized tutors array/object containing clearly marked placeholder tutor entries so the user can edit in one place."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Register the Tutors page route and wire it into the persistent header navigation. Use shadcn-ui (selected component) navigation elements if used; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Create Contact Details page with placeholder email/WhatsApp contacts from centralized config and a mailto-based contact form.",
+      "acceptanceCriteria": [
+        "Contact page displays an email field/row (placeholder if not provided) and at least one placeholder WhatsApp/cell contact entry with a placeholder name.",
+        "Contact form submission triggers a mailto: link (or equivalent client-side approach) rather than attempting to send emails via a server/external provider.",
+        "No third-party messaging/email services are integrated."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ContactPage.tsx",
+          "operation": "create",
+          "description": "Create Contact Details page showing academy email (placeholder) and WhatsApp/cell contacts (name + number placeholders) sourced from centralized config. Add a simple contact form that opens a mailto: link with prefilled subject/body (client-side only; no external services). Use shadcn-ui (selected component) form inputs/buttons where available; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/content/siteContent.ts",
+          "operation": "modify",
+          "description": "Add centralized contact configuration (email placeholder, WhatsApp/cell contacts with placeholder names/numbers) so updates happen in one place."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Register the Contact route and ensure the header navigation link routes correctly via client-side navigation. Use shadcn-ui (selected component) navigation elements if used; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Apply a cohesive professional religious-education visual theme using Tailwind without editing immutable UI component sources.",
+      "acceptanceCriteria": [
+        "All pages share a consistent theme (colors, typography, spacing).",
+        "Theme avoids default blue/purple styling unless explicitly needed for contrast/accessibility.",
+        "No files under the immutable UI component directories are directly edited; they are only composed/used."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Create/define global Tailwind base styles and CSS variables (or Tailwind utilities) to establish a warm neutral + green/gold accented brand theme (avoiding default blue/purple), consistent typography, and spacing. Keep changes confined to app-owned styling entry points."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Adjust Tailwind theme extensions (e.g., semantic color tokens/typography defaults) to support the chosen brand palette and consistent component styling across pages, while keeping accessibility in mind (contrast)."
+        },
+        {
+          "path": "frontend/src/components/layout/SiteLayout.tsx",
+          "operation": "modify",
+          "description": "Apply consistent layout spacing, max-width/container usage, and shared section styling hooks so all pages feel coherent. Use shadcn-ui (selected component) primitives only via composition; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/layout/HeaderNav.tsx",
+          "operation": "modify",
+          "description": "Apply consistent header styling (background, border, spacing) aligned with the theme and ensure responsive behavior (mobile/desktop). Use shadcn-ui (selected component) components only via composition; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/layout/SiteFooter.tsx",
+          "operation": "modify",
+          "description": "Apply footer styling aligned with the theme and consistent typography/spacing. Use shadcn-ui (selected component) primitives only via composition; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Ensure SPA routes work after Internet Computer deployment and assets serve correctly for direct navigation.",
+      "acceptanceCriteria": [
+        "Running the standard IC deployment workflow results in a live, publicly accessible canister URL that serves the multi-page site.",
+        "All routes work when accessed from the deployed site (including direct navigation to non-home routes)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Use hash-based routing (HashRouter) or equivalent SPA-safe routing approach so that direct navigation to non-home pages works reliably on static hosting environments like the IC asset canister."
+        },
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Ensure the HTML entry includes appropriate meta/title and remains compatible with the chosen routing approach; confirm assets (including generated images) resolve correctly when served from the deployed canister."
+        },
+        {
+          "path": "frontend/public/404.html",
+          "operation": "create",
+          "description": "Add a static fallback page to improve compatibility with static hosting routing behavior where applicable (kept simple and aligned with SPA routing), helping ensure non-home routes remain accessible after deployment."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Build and deploy a highly professional multi-page website for Iqra-Tul-Tajweed Online Quran Academy with specified pages, course offerings, tutor details, contact information, and listed benefits.",
+  "architectural_notes": [
+    "Target outcome includes deployment to provide a live link the user can view."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Academy logo in a clean flat style with Islamic geometric accent (academy-logo.dim_512x512.png)\n- Homepage hero background with subtle Islamic geometric pattern in warm neutral tones (hero-bg.dim_1920x1080.png)",
+  "existing_features": [
+    {
+      "id": "feature-implement-a-multi-page-marketing-website-for-iqra-tul-tajweed-online-quran-academy-with-these-pages-and-routes-home-about-us-course-details-tutors-details-experience-and-contact-details-including-an-email-address-include-a-persistent-header-navigation-and-footer-across-all-pages",
+      "title": "Implement a multi-page marketing website for “Iqra-Tul-Tajweed Online Quran Academy” with these pages and routes: Home, About Us, Course Details, Tutors Details & Experience, and Contact Details (including an email address). Include a persistent header navigation and footer across all pages.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-populate-the-home-page-with-clear-sections-that-present-the-academy-at-a-professional-standard-hero-section-academy-name-concise-value-statement-a-summary-of-course-offerings-including-qawaid-qaida-tajweed-quran-nazera-quran-recitation-islamic-knowledge-and-a-benefits-section-listing-2-free-trial-classes-flexible-timing-no-age-limit-separate-male-female-tutors-and-one-on-one-classes",
+      "title": "Populate the Home page with clear sections that present the academy at a professional standard: hero section (academy name + concise value statement), a summary of course offerings (including: Qawaid Qaida + Tajweed, Quran Nazera, Quran Recitation, Islamic Knowledge), and a benefits section listing: 2 free trial classes, flexible timing, no age limit, separate male/female tutors, and one-on-one classes.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-an-about-us-page-describing-the-academy-s-mission-and-teaching-approach-in-a-professional-tone-and-include-a-short-why-choose-us-section-that-reinforces-the-listed-benefits-without-introducing-new-claims-that-require-verification",
+      "title": "Create an About Us page describing the academy’s mission and teaching approach in a professional tone, and include a short “Why choose us” section that reinforces the listed benefits without introducing new claims that require verification.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-course-details-page-that-presents-the-course-offerings-at-minimum-qawaid-qaida-tajweed-quran-nazera-quran-recitation-islamic-knowledge-with-a-consistent-structure-per-course-e-g-overview-who-it-s-for-what-students-learn",
+      "title": "Create a Course Details page that presents the course offerings (at minimum: Qawaid Qaida + Tajweed, Quran Nazera, Quran Recitation, Islamic Knowledge) with a consistent structure per course (e.g., overview, who it’s for, what students learn).",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-tutors-details-experience-page-with-a-professional-layout-that-can-display-multiple-tutor-profiles-name-short-bio-experience-qualifications-text-languages-teaching-focus-because-specific-tutor-names-details-were-not-provided-implement-the-page-using-clearly-marked-placeholder-entries-and-a-single-central-configuration-file-object-so-the-user-can-easily-replace-placeholders-later-without-editing-many-components",
+      "title": "Create a Tutors Details & Experience page with a professional layout that can display multiple tutor profiles (name, short bio, experience/qualifications text, languages/teaching focus). Because specific tutor names/details were not provided, implement the page using clearly marked placeholder entries and a single central configuration file/object so the user can easily replace placeholders later without editing many components.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-contact-details-page-that-displays-the-academy-email-address-and-a-section-for-whatsapp-cell-contact-numbers-with-contact-names-since-the-exact-email-address-and-numbers-were-not-provided-render-placeholders-and-structure-the-data-so-it-can-be-updated-from-one-centralized-config-add-a-simple-contact-form-that-uses-a-mailto-fallback-no-external-email-service-integration-to-open-the-user-s-email-client-with-a-prefilled-subject-body",
+      "title": "Create a Contact Details page that displays the academy email address and a section for WhatsApp/cell contact numbers (with contact names). Since the exact email address and numbers were not provided, render placeholders and structure the data so it can be updated from one centralized config. Add a simple contact form that uses a mailto: fallback (no external email service integration) to open the user’s email client with a prefilled subject/body.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-coherent-distinctive-visual-theme-for-a-professional-religious-education-brand-avoid-blue-purple-by-default-define-consistent-typography-spacing-and-component-styling-across-all-pages-using-tailwind-and-existing-ui-components-compose-do-not-modify-read-only-ui-component-sources",
+      "title": "Apply a coherent, distinctive visual theme for a professional religious education brand (avoid blue/purple by default). Define consistent typography, spacing, and component styling across all pages using Tailwind and existing UI components (compose; do not modify read-only UI component sources).",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-the-project-can-be-deployed-on-the-internet-computer-so-the-user-can-view-it-live-provide-a-repeatable-deployment-flow-using-the-standard-dfx-workflow-and-confirm-the-frontend-assets-are-served-correctly-after-deployment",
+      "title": "Ensure the project can be deployed on the Internet Computer so the user can view it live. Provide a repeatable deployment flow using the standard dfx workflow and confirm the frontend assets are served correctly after deployment.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create and deploy a professional multi-page website for Iqra-Tul-Tajweed Online Quran Academy",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Add required pages: Home, About Us, Course Details, Tutors Details & Experience, Contact Details (with Email Address)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Include course offerings (Qawaid Qaida + Tajweed, Quran Nazera, Quran Recitation, Islamic Knowledge, etc.)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Add contact information including WhatsApp/cell numbers (with names) and academy email address",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "List academy benefits (2 free trial classes, flexible timing, no age limit, separate male/female tutors, one-on-one classes)",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Iqra-Tul-Tajweed Online Quran Academy",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

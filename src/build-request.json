@@ -1,0 +1,174 @@
+{
+  "kind": "build_request",
+  "title": "Create and deploy multi-page website for Iqra-Tul-Tajweed Online Quran Academy",
+  "priority": "high",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Implement a multi-page marketing website for “Iqra-Tul-Tajweed Online Quran Academy” with these pages and routes: Home, About Us, Course Details, Tutors Details & Experience, and Contact Details (including an email address). Include a persistent header navigation and footer across all pages.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "recent-messages"
+        ],
+        "quotes": [
+          "Multi page website",
+          "Home\nAbout us\nCourse Details \nTutors Details & Experience \nContact Details with\nEmail Address",
+          "Yes deploy it now"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Navigation links exist for all 5 pages and route correctly without full page reloads.",
+        "Header and footer render consistently across all pages.",
+        "All user-facing text is in English."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Populate the Home page with clear sections that present the academy at a professional standard: hero section (academy name + concise value statement), a summary of course offerings (including: Qawaid Qaida + Tajweed, Quran Nazera, Quran Recitation, Islamic Knowledge), and a benefits section listing: 2 free trial classes, flexible timing, no age limit, separate male/female tutors, and one-on-one classes.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "recent-messages"
+        ],
+        "quotes": [
+          "Build and deploy a highly professional multi-page website for Iqra-Tul-Tajweed Online Quran Academy with specified pages, course offerings, tutor details, contact information, and listed benefits."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Home page includes course offerings that explicitly include: Qawaid Qaida + Tajweed, Quran Nazera, Quran Recitation, Islamic Knowledge.",
+        "Home page includes the 5 benefits exactly as listed in the project state summary.",
+        "Layout is responsive and looks good on mobile and desktop."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Create an About Us page describing the academy’s mission and teaching approach in a professional tone, and include a short “Why choose us” section that reinforces the listed benefits without introducing new claims that require verification.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "recent-messages"
+        ],
+        "quotes": [
+          "About us",
+          "Build and deploy a highly professional multi-page website for Iqra-Tul-Tajweed Online Quran Academy...listed benefits."
+        ]
+      },
+      "acceptanceCriteria": [
+        "About Us page contains mission + teaching approach content and a “Why choose us” section.",
+        "No third-party certifications, statistics, or unverifiable claims are added."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Create a Course Details page that presents the course offerings (at minimum: Qawaid Qaida + Tajweed, Quran Nazera, Quran Recitation, Islamic Knowledge) with a consistent structure per course (e.g., overview, who it’s for, what students learn).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "recent-messages"
+        ],
+        "quotes": [
+          "Course Details",
+          "Include course offerings (Qawaid Qaida + Tajweed, Quran Nazera, Quran Recitation, Islamic Knowledge, etc.)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Each listed course is visible on the Course Details page and uses a consistent presentation format.",
+        "Course list includes at least the 4 explicitly named offerings."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Create a Tutors Details & Experience page with a professional layout that can display multiple tutor profiles (name, short bio, experience/qualifications text, languages/teaching focus). Because specific tutor names/details were not provided, implement the page using clearly marked placeholder entries and a single central configuration file/object so the user can easily replace placeholders later without editing many components.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "recent-messages"
+        ],
+        "quotes": [
+          "Tutors Details & Experience"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Tutors page renders at least 2 placeholder tutor cards/sections.",
+        "Tutor content is sourced from a single centralized data structure (one place to edit) rather than hardcoded throughout the UI.",
+        "Placeholders are clearly labeled as placeholders in the content."
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Create a Contact Details page that displays the academy email address and a section for WhatsApp/cell contact numbers (with contact names). Since the exact email address and numbers were not provided, render placeholders and structure the data so it can be updated from one centralized config. Add a simple contact form that uses a mailto: fallback (no external email service integration) to open the user’s email client with a prefilled subject/body.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "recent-messages"
+        ],
+        "quotes": [
+          "Contact Details with\nEmail Address",
+          "Add contact information including WhatsApp/cell numbers (with names) and academy email address"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Contact page displays an email field/row (placeholder if not provided) and at least one placeholder WhatsApp/cell contact entry with a placeholder name.",
+        "Contact form submission triggers a mailto: link (or equivalent client-side approach) rather than attempting to send emails via a server/external provider.",
+        "No third-party messaging/email services are integrated."
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Apply a coherent, distinctive visual theme for a professional religious education brand (avoid blue/purple by default). Define consistent typography, spacing, and component styling across all pages using Tailwind and existing UI components (compose; do not modify read-only UI component sources).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "recent-messages"
+        ],
+        "quotes": [
+          "Build and deploy a highly professional multi-page website for Iqra-Tul-Tajweed Online Quran Academy"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All pages share a consistent theme (colors, typography, spacing).",
+        "Theme avoids default blue/purple styling unless explicitly needed for contrast/accessibility.",
+        "No files under the immutable UI component directories are directly edited; they are only composed/used."
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Ensure the project can be deployed on the Internet Computer so the user can view it live. Provide a repeatable deployment flow using the standard dfx workflow and confirm the frontend assets are served correctly after deployment.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "recent-messages"
+        ],
+        "quotes": [
+          "Yes deploy it now",
+          "I want to see the website"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Running the standard IC deployment workflow results in a live, publicly accessible canister URL that serves the multi-page site.",
+        "All routes work when accessed from the deployed site (including direct navigation to non-home routes)."
+      ]
+    }
+  ],
+  "constraints": [
+    "Backend must remain a single Motoko actor (no multi-canister microservices).",
+    "Do not modify files in frontend immutablePaths; compose existing UI components instead.",
+    "Do not add third-party authentication providers; only Internet Identity is allowed (and not required for this marketing site).",
+    "Do not integrate external email/SMS/WhatsApp APIs; use on-page details and mailto: for contact form behavior."
+  ],
+  "nonGoals": [
+    "Student login portal or gated course access.",
+    "Payments, subscriptions, or Stripe checkout.",
+    "Real-time chat or messaging.",
+    "Admin dashboard/CMS for editing site content (beyond centralized frontend config objects).",
+    "SEO/backlink campaigns or external analytics integrations."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Academy logo in a clean flat style with Islamic geometric accent (academy-logo.dim_512x512.png)",
+      "Homepage hero background with subtle Islamic geometric pattern in warm neutral tones (hero-bg.dim_1920x1080.png)"
+    ],
+    "edits": []
+  }
+}

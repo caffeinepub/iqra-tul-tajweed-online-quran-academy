@@ -1,0 +1,169 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-implement-a-multi-page-marketing-website-for-iqra-tul-tajweed-online-quran-academy-with-these-pages-and-routes-home-about-us-course-details-tutors-details-experience-and-contact-details-including-an-email-address-include-a-persistent-header-navigation-and-footer-across-all-pages",
+      "featureTitle": "Implement a multi-page marketing website for “Iqra-Tul-Tajweed Online Quran Academy” with these pages and routes: Home, About Us, Course Details, Tutors Details & Experience, and Contact Details (including an email address). Include a persistent header navigation and footer across all pages.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/layout/HeaderNav.tsx",
+        "frontend/src/components/layout/SiteFooter.tsx",
+        "frontend/src/components/layout/SiteLayout.tsx",
+        "frontend/src/main.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-populate-the-home-page-with-clear-sections-that-present-the-academy-at-a-professional-standard-hero-section-academy-name-concise-value-statement-a-summary-of-course-offerings-including-qawaid-qaida-tajweed-quran-nazera-quran-recitation-islamic-knowledge-and-a-benefits-section-listing-2-free-trial-classes-flexible-timing-no-age-limit-separate-male-female-tutors-and-one-on-one-classes",
+      "featureTitle": "Populate the Home page with clear sections that present the academy at a professional standard: hero section (academy name + concise value statement), a summary of course offerings (including: Qawaid Qaida + Tajweed, Quran Nazera, Quran Recitation, Islamic Knowledge), and a benefits section listing: 2 free trial classes, flexible timing, no age limit, separate male/female tutors, and one-on-one classes.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/content/siteContent.ts",
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-an-about-us-page-describing-the-academy-s-mission-and-teaching-approach-in-a-professional-tone-and-include-a-short-why-choose-us-section-that-reinforces-the-listed-benefits-without-introducing-new-claims-that-require-verification",
+      "featureTitle": "Create an About Us page describing the academy’s mission and teaching approach in a professional tone, and include a short “Why choose us” section that reinforces the listed benefits without introducing new claims that require verification.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/content/siteContent.ts",
+        "frontend/src/pages/AboutPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-course-details-page-that-presents-the-course-offerings-at-minimum-qawaid-qaida-tajweed-quran-nazera-quran-recitation-islamic-knowledge-with-a-consistent-structure-per-course-e-g-overview-who-it-s-for-what-students-learn",
+      "featureTitle": "Create a Course Details page that presents the course offerings (at minimum: Qawaid Qaida + Tajweed, Quran Nazera, Quran Recitation, Islamic Knowledge) with a consistent structure per course (e.g., overview, who it’s for, what students learn).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/content/siteContent.ts",
+        "frontend/src/pages/CourseDetailsPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-tutors-details-experience-page-with-a-professional-layout-that-can-display-multiple-tutor-profiles-name-short-bio-experience-qualifications-text-languages-teaching-focus-because-specific-tutor-names-details-were-not-provided-implement-the-page-using-clearly-marked-placeholder-entries-and-a-single-central-configuration-file-object-so-the-user-can-easily-replace-placeholders-later-without-editing-many-components",
+      "featureTitle": "Create a Tutors Details & Experience page with a professional layout that can display multiple tutor profiles (name, short bio, experience/qualifications text, languages/teaching focus). Because specific tutor names/details were not provided, implement the page using clearly marked placeholder entries and a single central configuration file/object so the user can easily replace placeholders later without editing many components.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/content/siteContent.ts",
+        "frontend/src/pages/TutorsPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-contact-details-page-that-displays-the-academy-email-address-and-a-section-for-whatsapp-cell-contact-numbers-with-contact-names-since-the-exact-email-address-and-numbers-were-not-provided-render-placeholders-and-structure-the-data-so-it-can-be-updated-from-one-centralized-config-add-a-simple-contact-form-that-uses-a-mailto-fallback-no-external-email-service-integration-to-open-the-user-s-email-client-with-a-prefilled-subject-body",
+      "featureTitle": "Create a Contact Details page that displays the academy email address and a section for WhatsApp/cell contact numbers (with contact names). Since the exact email address and numbers were not provided, render placeholders and structure the data so it can be updated from one centralized config. Add a simple contact form that uses a mailto: fallback (no external email service integration) to open the user’s email client with a prefilled subject/body.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/content/siteContent.ts",
+        "frontend/src/pages/ContactPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-a-coherent-distinctive-visual-theme-for-a-professional-religious-education-brand-avoid-blue-purple-by-default-define-consistent-typography-spacing-and-component-styling-across-all-pages-using-tailwind-and-existing-ui-components-compose-do-not-modify-read-only-ui-component-sources",
+      "featureTitle": "Apply a coherent, distinctive visual theme for a professional religious education brand (avoid blue/purple by default). Define consistent typography, spacing, and component styling across all pages using Tailwind and existing UI components (compose; do not modify read-only UI component sources).",
+      "files": [
+        "frontend/src/components/layout/HeaderNav.tsx",
+        "frontend/src/components/layout/SiteFooter.tsx",
+        "frontend/src/components/layout/SiteLayout.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-ensure-the-project-can-be-deployed-on-the-internet-computer-so-the-user-can-view-it-live-provide-a-repeatable-deployment-flow-using-the-standard-dfx-workflow-and-confirm-the-frontend-assets-are-served-correctly-after-deployment",
+      "featureTitle": "Ensure the project can be deployed on the Internet Computer so the user can view it live. Provide a repeatable deployment flow using the standard dfx workflow and confirm the frontend assets are served correctly after deployment.",
+      "files": [
+        "frontend/index.html",
+        "frontend/public/404.html",
+        "frontend/src/App.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

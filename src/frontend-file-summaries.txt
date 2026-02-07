@@ -1,0 +1,16 @@
+{
+  "frontend/src/App.tsx": "Main application component using TanStack Router with route definitions for all five pages (Home, About, Courses, Tutors, Contact) wrapped in a shared layout.",
+  "frontend/src/components/layout/SiteLayout.tsx": "Layout wrapper component that renders the persistent header navigation, main content outlet using TanStack Router, and footer across all pages.",
+  "frontend/src/components/layout/HeaderNav.tsx": "Responsive header navigation component with logo, desktop menu, mobile hamburger menu, and active route highlighting using TanStack Router.",
+  "frontend/src/components/layout/SiteFooter.tsx": "Site footer component displaying academy branding, description, and attribution with caffeine.ai link.",
+  "frontend/src/pages/HomePage.tsx": "Home page with hero section, course offerings grid, benefits section, and call-to-action using TanStack Router Link components and content from centralized config.",
+  "frontend/src/pages/AboutPage.tsx": "About Us page presenting the academy's mission, teaching approach, and why-choose-us sections with professional layout.",
+  "frontend/src/pages/CourseDetailsPage.tsx": "Course details page displaying all four required courses with structured information (overview, who it's for, what you'll learn).",
+  "frontend/src/pages/TutorsPage.tsx": "Tutors page showing placeholder tutor profiles with clearly marked placeholders and note about updating centralized content.",
+  "frontend/src/pages/ContactPage.tsx": "Contact page with email, WhatsApp contacts, and mailto-based contact form that opens user's email client.",
+  "frontend/src/content/siteContent.ts": "Centralized content configuration file containing all marketing copy, course details, benefits, tutor profiles, and contact information for easy updates.",
+  "frontend/src/index.css": "Global styles with OKLCH color system using warm neutral tones with teal/green accents suitable for Islamic education branding.",
+  "frontend/tailwind.config.js": "Tailwind configuration with extended theme colors, Inter font family, and custom design tokens matching the Islamic education aesthetic.",
+  "frontend/public/404.html": "Static fallback page that redirects to main app for hash-based routing compatibility on static hosting.",
+  "frontend/src/hooks/useQueries.ts": "Minimal queries file as no backend data fetching is required for this static marketing website."
+}
