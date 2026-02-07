@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 3,
-  "summary": "Build and deploy a highly professional multi-page website for Iqra-Tul-Tajweed Online Quran Academy with specified pages, course offerings, tutor details, contact information, and listed benefits.",
+  "projectStateVersion": 5,
+  "summary": "Replace the current multi-page academy website with a new design (based on the referenced example), add Home page leadership and Arabic Bismillah content, and publish under the desired custom domain name.",
   "architectural_notes": [
-    "Target outcome includes deployment to provide a live link the user can view."
+    "Target outcome includes deployment to provide a live link the user can view.",
+    "User requests publishing under a custom domain (https://www.iqratultajweedonlinequranacademy.com); may require DNS/ICP custom domain configuration beyond standard icp0.io link."
   ],
   "known_issues": [],
   "isFixRequest": false,
-  "imageRequirements": "## Required Images\n- Academy logo in a clean flat style with Islamic geometric accent (academy-logo.dim_512x512.png)\n- Homepage hero background with subtle Islamic geometric pattern in warm neutral tones (hero-bg.dim_1920x1080.png)",
   "existing_features": [
     {
       "id": "feature-implement-a-multi-page-marketing-website-for-iqra-tul-tajweed-online-quran-academy-with-these-pages-and-routes-home-about-us-course-details-tutors-details-experience-and-contact-details-including-an-email-address-include-a-persistent-header-navigation-and-footer-across-all-pages",
@@ -72,6 +72,38 @@
         "REQ-8"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-add-the-arabic-bismillah-text-to-the-home-page-in-a-prominent-visually-respectful-placement-e-g-above-the-main-hero-title-ensuring-it-renders-correctly-on-mobile-and-desktop",
+      "title": "Add the Arabic Bismillah text “بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ” to the Home page in a prominent, visually respectful placement (e.g., above the main hero title), ensuring it renders correctly on mobile and desktop.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-leadership-section-on-the-home-page-listing-these-roles-and-names-founder-ceo-syed-irfan-ali-vice-president-md-rayyan-malik-president-md-zaid-uddin-store-this-leadership-data-in-the-centralized-content-config-so-it-can-be-edited-without-changing-page-components",
+      "title": "Add a “Leadership” section on the Home page listing these roles and names: Founder/CEO: SYED IRFAN ALI; Vice President: Md Rayyan Malik; President: Md Zaid Uddin. Store this leadership data in the centralized content config so it can be edited without changing page components.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-reflect-the-requested-public-website-name-url-https-www-iqratultajweedonlinequranacademy-com-in-site-branding-by-adding-it-to-centralized-site-content-and-rendering-it-in-at-least-one-obvious-location-in-the-ui-e-g-footer-and-or-contact-page-as-a-clickable-link",
+      "title": "Reflect the requested public website name/URL \"https://www.iqratultajweedonlinequranacademy.com\" in site branding by adding it to centralized site content and rendering it in at least one obvious location in the UI (e.g., footer and/or Contact page) as a clickable link.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-documentation-describing-how-to-point-a-custom-domain-https-www-iqratultajweedonlinequranacademy-com-to-the-internet-computer-deployment-including-the-fact-that-domain-dns-configuration-is-done-outside-the-app-and-the-deployed-canister-url-will-still-work-independently",
+      "title": "Add documentation describing how to point a custom domain (https://www.iqratultajweedonlinequranacademy.com) to the Internet Computer deployment, including the fact that domain/DNS configuration is done outside the app and the deployed canister URL will still work independently.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -102,6 +134,36 @@
     {
       "id": "AR-5",
       "summary": "List academy benefits (2 free trial classes, flexible timing, no age limit, separate male/female tutors, one-on-one classes)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Replace the existing multi-page website with a new design based on the provided example site, while keeping the same academy content/pages",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Add a leadership section on the Home page listing: Founder/CEO SYED IRFAN ALI, Vice President Md Rayyan Malik, President Md Zaid Uddin",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Add the Arabic Bismillah text “بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ” on the Home page",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Update site to be named/accessible as https://www.iqratultajweedonlinequranacademy.com (custom domain request)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Set academy contact email to iqratultajweedonlineacademy@gmail.com (replace placeholder)",
       "reqIds": [],
       "status": "pending"
     }

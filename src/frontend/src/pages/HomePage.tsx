@@ -13,6 +13,17 @@ export function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-background/80" />
         <div className="container relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-6">
+            {/* Arabic Bismillah */}
+            <div className="mb-6">
+              <p 
+                className="text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground"
+                style={{ direction: 'rtl', fontFamily: 'serif' }}
+                lang="ar"
+              >
+                بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
+              </p>
+            </div>
+            
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
               {siteContent.hero.title}
             </h1>
@@ -34,6 +45,38 @@ export function HomePage() {
                 Contact Us
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Leadership Section */}
+      <section className="py-16 md:py-20 bg-background">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Our Leadership
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Meet the dedicated leaders guiding our academy's mission
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            {siteContent.leadership.map((leader, index) => (
+              <div
+                key={index}
+                className="bg-card border border-border rounded-lg p-6 text-center hover:shadow-lg transition-shadow"
+              >
+                <div className="flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mx-auto mb-4">
+                  <Users className="h-8 w-8" />
+                </div>
+                <h3 className="text-lg font-semibold text-card-foreground mb-2">
+                  {leader.title}
+                </h3>
+                <p className="text-base font-medium text-foreground">
+                  {leader.name}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

@@ -1,174 +1,96 @@
 {
   "kind": "build_request",
-  "title": "Create and deploy multi-page website for Iqra-Tul-Tajweed Online Quran Academy",
-  "priority": "high",
+  "title": "Add Home page leadership + Arabic Bismillah, and reflect requested custom domain branding",
+  "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-1",
-      "text": "Implement a multi-page marketing website for “Iqra-Tul-Tajweed Online Quran Academy” with these pages and routes: Home, About Us, Course Details, Tutors Details & Experience, and Contact Details (including an email address). Include a persistent header navigation and footer across all pages.",
+      "id": "REQ-9",
+      "text": "Add the Arabic Bismillah text “بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ” to the Home page in a prominent, visually respectful placement (e.g., above the main hero title), ensuring it renders correctly on mobile and desktop.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "recent-messages"
+          "msg-16",
+          "msg-17"
         ],
         "quotes": [
-          "Multi page website",
-          "Home\nAbout us\nCourse Details \nTutors Details & Experience \nContact Details with\nEmail Address",
-          "Yes deploy it now"
+          "And add Bismillah hirrahman nir raheem in Arabic on home page"
         ]
       },
       "acceptanceCriteria": [
-        "Navigation links exist for all 5 pages and route correctly without full page reloads.",
-        "Header and footer render consistently across all pages.",
-        "All user-facing text is in English."
+        "Home page displays the exact Arabic text: “بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ”.",
+        "The Arabic text is visible in the Home page hero area and remains readable across common viewport sizes (mobile, tablet, desktop).",
+        "No other pages are broken and existing Home sections (hero, courses, benefits, CTA) still render."
       ]
     },
     {
-      "id": "REQ-2",
-      "text": "Populate the Home page with clear sections that present the academy at a professional standard: hero section (academy name + concise value statement), a summary of course offerings (including: Qawaid Qaida + Tajweed, Quran Nazera, Quran Recitation, Islamic Knowledge), and a benefits section listing: 2 free trial classes, flexible timing, no age limit, separate male/female tutors, and one-on-one classes.",
+      "id": "REQ-10",
+      "text": "Add a “Leadership” section on the Home page listing these roles and names: Founder/CEO: SYED IRFAN ALI; Vice President: Md Rayyan Malik; President: Md Zaid Uddin. Store this leadership data in the centralized content config so it can be edited without changing page components.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "recent-messages"
+          "msg-13",
+          "msg-15"
         ],
         "quotes": [
-          "Build and deploy a highly professional multi-page website for Iqra-Tul-Tajweed Online Quran Academy with specified pages, course offerings, tutor details, contact information, and listed benefits."
+          "Place same thing add founder / Ceo named as SYED IRFAN ALI  vise president named as Md Rayyan Malik  President named as Md Zaid Uddin",
+          "Add on home page"
         ]
       },
       "acceptanceCriteria": [
-        "Home page includes course offerings that explicitly include: Qawaid Qaida + Tajweed, Quran Nazera, Quran Recitation, Islamic Knowledge.",
-        "Home page includes the 5 benefits exactly as listed in the project state summary.",
-        "Layout is responsive and looks good on mobile and desktop."
+        "Home page includes a clearly labeled Leadership section containing exactly the three requested roles and names.",
+        "Leadership entries are sourced from the centralized content file (frontend/src/content/siteContent.ts) rather than hard-coded directly in the page component.",
+        "Section layout is responsive and consistent with the existing site theme (spacing, typography, card/border styles)."
       ]
     },
     {
-      "id": "REQ-3",
-      "text": "Create an About Us page describing the academy’s mission and teaching approach in a professional tone, and include a short “Why choose us” section that reinforces the listed benefits without introducing new claims that require verification.",
+      "id": "REQ-11",
+      "text": "Reflect the requested public website name/URL \"https://www.iqratultajweedonlinequranacademy.com\" in site branding by adding it to centralized site content and rendering it in at least one obvious location in the UI (e.g., footer and/or Contact page) as a clickable link.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "recent-messages"
+          "msg-18"
         ],
         "quotes": [
-          "About us",
-          "Build and deploy a highly professional multi-page website for Iqra-Tul-Tajweed Online Quran Academy...listed benefits."
+          "Ok get started i want to see my website with updates and named as https://www.iqratultajweedonlinequranacademy.com"
         ]
       },
       "acceptanceCriteria": [
-        "About Us page contains mission + teaching approach content and a “Why choose us” section.",
-        "No third-party certifications, statistics, or unverifiable claims are added."
+        "The URL “https://www.iqratultajweedonlinequranacademy.com” is stored in a centralized content/config location (e.g., frontend/src/content/siteContent.ts).",
+        "The URL is rendered somewhere user-visible (footer and/or contact page) as a clickable link that points to the same URL.",
+        "All existing routes continue to work, and layout remains consistent across pages."
       ]
     },
     {
-      "id": "REQ-4",
-      "text": "Create a Course Details page that presents the course offerings (at minimum: Qawaid Qaida + Tajweed, Quran Nazera, Quran Recitation, Islamic Knowledge) with a consistent structure per course (e.g., overview, who it’s for, what students learn).",
+      "id": "REQ-12",
+      "text": "Add documentation describing how to point a custom domain (https://www.iqratultajweedonlinequranacademy.com) to the Internet Computer deployment, including the fact that domain/DNS configuration is done outside the app and the deployed canister URL will still work independently.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "recent-messages"
+          "msg-18"
         ],
         "quotes": [
-          "Course Details",
-          "Include course offerings (Qawaid Qaida + Tajweed, Quran Nazera, Quran Recitation, Islamic Knowledge, etc.)"
+          "named as https://www.iqratultajweedonlinequranacademy.com"
         ]
       },
       "acceptanceCriteria": [
-        "Each listed course is visible on the Course Details page and uses a consistent presentation format.",
-        "Course list includes at least the 4 explicitly named offerings."
-      ]
-    },
-    {
-      "id": "REQ-5",
-      "text": "Create a Tutors Details & Experience page with a professional layout that can display multiple tutor profiles (name, short bio, experience/qualifications text, languages/teaching focus). Because specific tutor names/details were not provided, implement the page using clearly marked placeholder entries and a single central configuration file/object so the user can easily replace placeholders later without editing many components.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "recent-messages"
-        ],
-        "quotes": [
-          "Tutors Details & Experience"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Tutors page renders at least 2 placeholder tutor cards/sections.",
-        "Tutor content is sourced from a single centralized data structure (one place to edit) rather than hardcoded throughout the UI.",
-        "Placeholders are clearly labeled as placeholders in the content."
-      ]
-    },
-    {
-      "id": "REQ-6",
-      "text": "Create a Contact Details page that displays the academy email address and a section for WhatsApp/cell contact numbers (with contact names). Since the exact email address and numbers were not provided, render placeholders and structure the data so it can be updated from one centralized config. Add a simple contact form that uses a mailto: fallback (no external email service integration) to open the user’s email client with a prefilled subject/body.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "recent-messages"
-        ],
-        "quotes": [
-          "Contact Details with\nEmail Address",
-          "Add contact information including WhatsApp/cell numbers (with names) and academy email address"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Contact page displays an email field/row (placeholder if not provided) and at least one placeholder WhatsApp/cell contact entry with a placeholder name.",
-        "Contact form submission triggers a mailto: link (or equivalent client-side approach) rather than attempting to send emails via a server/external provider.",
-        "No third-party messaging/email services are integrated."
-      ]
-    },
-    {
-      "id": "REQ-7",
-      "text": "Apply a coherent, distinctive visual theme for a professional religious education brand (avoid blue/purple by default). Define consistent typography, spacing, and component styling across all pages using Tailwind and existing UI components (compose; do not modify read-only UI component sources).",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "recent-messages"
-        ],
-        "quotes": [
-          "Build and deploy a highly professional multi-page website for Iqra-Tul-Tajweed Online Quran Academy"
-        ]
-      },
-      "acceptanceCriteria": [
-        "All pages share a consistent theme (colors, typography, spacing).",
-        "Theme avoids default blue/purple styling unless explicitly needed for contrast/accessibility.",
-        "No files under the immutable UI component directories are directly edited; they are only composed/used."
-      ]
-    },
-    {
-      "id": "REQ-8",
-      "text": "Ensure the project can be deployed on the Internet Computer so the user can view it live. Provide a repeatable deployment flow using the standard dfx workflow and confirm the frontend assets are served correctly after deployment.",
-      "target": "both",
-      "source": {
-        "messageIds": [
-          "recent-messages"
-        ],
-        "quotes": [
-          "Yes deploy it now",
-          "I want to see the website"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Running the standard IC deployment workflow results in a live, publicly accessible canister URL that serves the multi-page site.",
-        "All routes work when accessed from the deployed site (including direct navigation to non-home routes)."
+        "A new documentation file exists in the repository (e.g., CUSTOM_DOMAIN.md or DEPLOYMENT.md) explaining the high-level steps to use a custom domain with an Internet Computer hosted site.",
+        "The documentation clearly states that the app cannot automatically claim/configure the custom domain and that DNS/domain ownership changes happen outside the codebase.",
+        "The documentation includes the exact requested domain string: https://www.iqratultajweedonlinequranacademy.com."
       ]
     }
   ],
   "constraints": [
-    "Backend must remain a single Motoko actor (no multi-canister microservices).",
-    "Do not modify files in frontend immutablePaths; compose existing UI components instead.",
-    "Do not add third-party authentication providers; only Internet Identity is allowed (and not required for this marketing site).",
-    "Do not integrate external email/SMS/WhatsApp APIs; use on-page details and mailto: for contact form behavior."
+    "Do not modify files under frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, or any files in frontend/src/components/ui (compose only).",
+    "Backend must remain single-actor Motoko architecture; do not add additional backend services.",
+    "No third-party email service integrations; keep the existing mailto: contact form approach."
   ],
   "nonGoals": [
-    "Student login portal or gated course access.",
-    "Payments, subscriptions, or Stripe checkout.",
-    "Real-time chat or messaging.",
-    "Admin dashboard/CMS for editing site content (beyond centralized frontend config objects).",
-    "SEO/backlink campaigns or external analytics integrations."
+    "Purchasing a domain name or performing registrar/DNS changes on behalf of the user.",
+    "Guaranteeing that https://www.iqratultajweedonlinequranacademy.com will be live without external DNS configuration (this is outside the app’s control).",
+    "Adding new pages/routes beyond the existing Home, About, Courses, Tutors, and Contact pages."
   ],
   "imageRequirements": {
-    "required": [
-      "Academy logo in a clean flat style with Islamic geometric accent (academy-logo.dim_512x512.png)",
-      "Homepage hero background with subtle Islamic geometric pattern in warm neutral tones (hero-bg.dim_1920x1080.png)"
-    ],
+    "required": [],
     "edits": []
   }
 }

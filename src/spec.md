@@ -1,17 +1,12 @@
 # Specification
 
 ## Summary
-**Goal:** Create and deploy a professional, English-language, multi-page marketing website for “Iqra-Tul-Tajweed Online Quran Academy” on the Internet Computer.
+**Goal:** Update the Home page with prominent Arabic Bismillah text, add a configurable Leadership section, and reflect the requested custom domain in site branding and documentation.
 
 **Planned changes:**
-- Implement 5 client-side routed pages: Home, About Us, Course Details, Tutors Details & Experience, Contact Details.
-- Add a persistent header navigation and footer across all pages.
-- Build the Home page with a hero section, course offerings (Qawaid Qaida + Tajweed, Quran Nazera, Quran Recitation, Islamic Knowledge), and a benefits section (2 free trial classes, flexible timing, no age limit, separate male/female tutors, one-on-one classes).
-- Create an About Us page with mission, teaching approach, and a “Why choose us” section (no unverifiable claims).
-- Create a Course Details page listing the required courses with a consistent per-course structure.
-- Create a Tutors page rendering at least 2 clearly labeled placeholder tutor profiles sourced from a single centralized config object.
-- Create a Contact Details page showing placeholder email and WhatsApp/cell contacts (with placeholder names) from a centralized config, plus a contact form that triggers a mailto: link.
-- Apply a coherent visual theme suitable for a religious education brand (avoid default blue/purple), using Tailwind and composing existing UI components (no edits to immutable component sources).
-- Ensure a repeatable dfx deployment flow to a live canister URL with working routes (including direct navigation to non-home routes).
+- Add the exact Arabic text “بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ” to the Home page hero area in a prominent, responsive placement.
+- Add a Home page “Leadership” section listing Founder/CEO: SYED IRFAN ALI; Vice President: Md Rayyan Malik; President: Md Zaid Uddin, sourced from centralized site content (frontend/src/content/siteContent.ts).
+- Add the URL “https://www.iqratultajweedonlinequranacademy.com” to centralized site content and render it in at least one obvious UI location as a clickable link (e.g., footer and/or Contact page).
+- Add a new documentation file explaining high-level custom domain pointing steps for an Internet Computer deployment, explicitly noting DNS/domain configuration happens outside the app and the canister URL still works.
 
-**User-visible outcome:** Visitors can browse a responsive, professionally themed multi-page academy website, view course and tutor information, and contact the academy via displayed details or a mailto-based contact form on a live deployed Internet Computer URL.
+**User-visible outcome:** Visitors see the Arabic Bismillah prominently on the Home page, a Leadership section with the requested names/titles, and the site displays the academy’s URL as a clickable link; the repo also includes guidance on connecting the custom domain to the deployment.

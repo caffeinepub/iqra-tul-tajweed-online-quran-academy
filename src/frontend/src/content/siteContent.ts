@@ -1,8 +1,23 @@
 export const siteContent = {
+  siteUrl: 'https://www.iqratultajweedonlinequranacademy.com',
   hero: {
     title: 'Iqra-Tul-Tajweed Online Quran Academy',
     subtitle: 'Learn Quran with qualified tutors from the comfort of your home. Authentic Islamic education with flexible timings and personalized attention.',
   },
+  leadership: [
+    {
+      title: 'Founder / CEO',
+      name: 'SYED IRFAN ALI',
+    },
+    {
+      title: 'Vice President',
+      name: 'Md Rayyan Malik',
+    },
+    {
+      title: 'President',
+      name: 'Md Zaid Uddin',
+    },
+  ],
   courses: [
     {
       title: 'Qawaid Qaida + Tajweed',

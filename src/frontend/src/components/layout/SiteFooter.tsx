@@ -1,4 +1,5 @@
-import { Heart } from 'lucide-react';
+import { Heart, ExternalLink } from 'lucide-react';
+import { siteContent } from '../../content/siteContent';
 
 export function SiteFooter() {
   return (
@@ -18,6 +19,17 @@ export function SiteFooter() {
           <p className="text-sm text-muted-foreground max-w-md">
             Learn Quran with qualified tutors. Flexible timings, personalized attention, and authentic Islamic education.
           </p>
+          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+            <a 
+              href={siteContent.siteUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 font-medium text-foreground hover:underline"
+            >
+              {siteContent.siteUrl.replace('https://', '')}
+              <ExternalLink className="h-3 w-3" />
+            </a>
+          </div>
           <div className="text-sm text-muted-foreground">
             © 2026. Built with <Heart className="inline h-4 w-4 text-rose-500 fill-rose-500" /> using{' '}
             <a 
